@@ -12,12 +12,17 @@ if (height / 2 % 2 == 0) height -= 1;
 canvas.width = width;
 canvas.height = height;
 
-let r = 100;
-let v = 0;
+let player = {
+    x: width / 2,
+    y: height / 2,
+    size: 0,
+};
 
-let pX = width / 2;
-let pY = height / 2;
-let size = 0;
+let enemies = [];
+
+// let pX = width / 2;
+// let pY = height / 2;
+// let size = 0;
 
 let FPS = 60;
 let UPS = 60; //updates per second

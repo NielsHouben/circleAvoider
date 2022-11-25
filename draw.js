@@ -1,8 +1,6 @@
 function drawWrapper () {
     try {
         let begin = Date.now();
-        // v += Math.PI / 720;
-        // r = 200 * Math.abs(Math.cos(v + Math.PI / 2));
 
         draw();
 
@@ -15,7 +13,6 @@ function drawWrapper () {
 
 function grid () {
     // line(height/2)
-
 }
 
 function draw () {
@@ -29,7 +26,7 @@ function draw () {
     grid();
 
 
-    point(pX, pY, 10 + size);
+    point(player.x, player.y, 10 + player.size);
 
 
 
