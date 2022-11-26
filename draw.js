@@ -14,6 +14,12 @@ function drawWrapper () {
 function grid () {
     // line(height/2)
 }
+function drawEnemies () {
+    enemies.forEach(enemy => {
+        point(enemy.x, enemy.y, enemy.size, enemy.color);
+    });
+    // line(height/2)
+}
 
 function draw () {
     // set defaults and clear screen
@@ -26,9 +32,12 @@ function draw () {
     grid();
 
 
+
+    // draw player
     point(player.x, player.y, 10 + player.size);
 
 
+    drawEnemies();
 
 
 }

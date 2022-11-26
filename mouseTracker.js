@@ -9,7 +9,8 @@ function mouseTracker (event) {
     // pY = event.clientY;
     player.x = event.clientX;
     player.y = event.clientY;
-    drawWrapper();
+    // drawWrapper();
+    // draw();
     // might be weird to draw both here and consistantly at certain fps
     // bust consistant drawing is needed when mouse isn't moving
     // and if we don't draw here then mouse start's stuttering

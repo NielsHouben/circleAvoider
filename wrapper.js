@@ -16,10 +16,10 @@ let player = {
     x: width / 2,
     y: height / 2,
     size: 0,
+    color: "white",
 };
 
 let enemies = [];
-
 // let pX = width / 2;
 // let pY = height / 2;
 // let size = 0;
@@ -30,11 +30,14 @@ let UPS = 60; //updates per second
 // drawState();
 
 function start () {
+    //speed is pixels per second
+    enemies.push({ x: width / 2, y: height / 2, direction: Math.PI / 2, speed: 100, size: 40, color: "red" });
     // schedule the first one.
     setTimeout(drawWrapper, 0);
+    draw();
     setTimeout(physicsWrapper, 0);
     document.onmousemove = mouseTracker;
-    console.log("sfdlkjl");
+    console.log("started");
 }
 
 start();

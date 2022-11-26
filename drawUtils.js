@@ -28,7 +28,8 @@ function line (start_x, start_y, end_x, end_y, origin = "center") {
  * @param  {number} r radius of point
  * @param  {string} [origin] cordinate plane center
  */
-function point (x, y, r, origin) {
+function point (x, y, r, color, origin) {
+    ctx.fillStyle = color;
     if (origin == "center") {
         x = (width / 2) + x;
         y = (height / 2) - y;

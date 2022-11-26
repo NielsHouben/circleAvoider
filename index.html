@@ -1,12 +1,25 @@
 <!-- TODO
     # pointerlock: https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API
     # make gamer wrapper that takes in function and runs it at certain delay, so that it can be used for both draw and physics.
+    # remove ability to teleport through right click (maybe have this as a powerup, move when click)
+    # powerup only move when mouse oves
+
+
 -->
 <!-- DISCSSION (with self...)
     Maybe visualize should only be called on when something has actually changed
     And have events that update often only call draw when change has been made
     this would probably reduce lag...
+
+    big problem, single threading leads to movement of object being on pause when stuff is happening, leading to it needing to "catch up"
+    would be great with real multi-threading
+    use web workers
+
+
+    works a lot better when just drawing at 60 fps instead of on mouse movement so that works too, but multiple threads would be optimal
+
 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +38,7 @@
     <script type="text/javascript" src="./physics.js"></script>
     <script type="text/javascript" src="./draw.js"></script>
     <script type="text/javascript" src="./wrapper.js"></script>
+    <script type="text/javascript" src="./enemies.js"></script>
 
 
 
